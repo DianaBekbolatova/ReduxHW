@@ -1,10 +1,8 @@
 import { configureStore } from '@reduxjs/toolkit'
-import bookSlice from './slices/bookSlice'
-import korzina from './slices/korzina'
+import toDoAsync from './slices/toDoAsync'
 
 export default configureStore({
     reducer: {
-        books: bookSlice,
-        korzina: korzina
+        toDos: toDoAsync
     }
 })
