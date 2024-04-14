@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import bookSlice from './slices/bookSlice'
-import korzina from './slices/korzina'
+import toDoAsync from './slices/toDoAsync'
+import { toDoAPI } from './api/toDoApi'
 
 export default configureStore({
     reducer: {
-        books: bookSlice,
-        korzina: korzina
-    }
-})
+        toDos: toDoAsync
+    //     [toDoAPI.reducerPath]: toDoAPI.reducer},
+    // middleware: (defaultMiddleware) => defaultMiddleware().concat(toDoAPI.middleware)
+    }})
